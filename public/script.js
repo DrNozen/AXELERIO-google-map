@@ -6,7 +6,7 @@ function initMap () {
         // Nous plaçons le centre de la carte avec les coordonnées ci-dessus
         center: new google.maps.LatLng(41.93, 8.65),
         // Nous définissons le zoom par défaut
-        zoom: 10,
+        zoom: 8,
         // Nous définissons le type de carte (ici carte routière)
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         // Nous activons les options de contrôle de la carte (plan, satellite...)
@@ -29,7 +29,7 @@ function initMap () {
 
     function appelAjax(f) {
         $.ajax({
-            url: 'https://opendata-corse.edf.fr/api/records/1.0/search/?dataset=parc-des-installations-de-production&facet=territoire&facet=producteur&facet=filiere',
+            url: '/api',
             type: 'GET',
             success: f,
             error: function(error) {
